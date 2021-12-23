@@ -51,6 +51,7 @@ class FetchSpotifyPodcastsServiceProvider extends ServiceProvider
     {
         // Automatically apply the package configuration
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'fetch-spotify-podcasts');
+        $this->mergeConfigFrom(__DIR__.'/../config/spotify.php', 'spotify');
 
         // Register the main class to use with the facade
         $this->app->singleton('fetch-spotify-podcasts', function () {

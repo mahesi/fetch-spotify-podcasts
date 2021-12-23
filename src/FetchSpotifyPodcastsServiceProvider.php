@@ -24,6 +24,10 @@ class FetchSpotifyPodcastsServiceProvider extends ServiceProvider
                 __DIR__.'/../config/config.php' => config_path('fetch-spotify-podcasts.php'),
             ], 'config');
 
+	        $this->publishes([
+		        __DIR__.'/../config/spotify.php' => config_path('spotify.php'),
+	        ], 'config');
+
             // Publishing the views.
             /*$this->publishes([
                 __DIR__.'/../resources/views' => resource_path('views/vendor/fetch-spotify-podcasts'),
